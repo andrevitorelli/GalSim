@@ -413,7 +413,7 @@ def do_pickle(obj1, func = lambda x : x, irreprable=False):
     f2 = func(obj2)
     #print('func(obj1) = ',repr(f1))
     #print('func(obj2) = ',repr(f2))
-    assert f1 == f2
+    assert f1 == f2, "%s != %s"%(repr(f1), repr(f2))
 
     # Check that == works properly if the other thing isn't the same type.
     assert f1 != object()
